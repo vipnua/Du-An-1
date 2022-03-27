@@ -1,0 +1,131 @@
+@font-face {
+    font-family: saira;
+    src: url('../fonts/saira.ttf');
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.ctn-trang-chu .loai {
+    font-family: 'saira';
+    font-size: 18px;
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ctn-trang-chu .loai-sp {
+    padding: 30px;
+    margin: 0px;
+    height: auto;
+    text-align: center;
+}
+
+.ctn-trang-chu .loai-sp p {
+    margin: 0px;
+}
+
+.ctn-trang-chu .loai-sp .img-loai-sp img {
+    border: 1px solid black;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+
+/* Sản phẩm */
+
+.ctn-trang-chu .san-pham {
+    font-family: 'saira';
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ctn-trang-chu h4 {
+    font-family: 'saira';
+    margin: 10px 0px;
+    text-align: center;
+}
+
+.ctn-trang-chu .san-pham .img-sp img {
+    border: 1px solid black;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.ctn-trang-chu .san-pham .name-sp {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 5px 0px 10px 0px;
+}
+
+.ctn-trang-chu .san-pham .gia {
+    float: left;
+}
+
+.ctn-trang-chu .san-pham .sao {
+    font-size: 8px;
+    float: right;
+}
+
+.ctn-trang-chu .san-pham .ctn-button {
+    display: block;
+    width: 100%;
+}
+
+.ctn-trang-chu .san-pham button {
+    font-size: 14px;
+    border: 0.5px solid black;
+    background-color: rgb(235, 158, 64);
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    /* padding: 0px 5px; */
+}
+
+.ctn-trang-chu .san-pham .mua-ngay {
+    float: left;
+}
+
+.ctn-trang-chu .san-pham .them-vao-gio-hang {
+    float: right;
+}
+
+
+/* mobile */
+
+@media screen and (max-width: 768px) {
+    .ctn-trang-chu .loai-sp {
+        padding: 20px;
+        margin: 0px;
+        text-align: center;
+    }
+    .ctn-trang-chu .loai-sp p {
+        font-size: 15px;
+    }
+    .ctn-trang-chu .san-pham button {
+        font-size: 9px;
+    }
+    .ctn-trang-chu .san-pham .gia {
+        font-size: 13px;
+    }
+    .ctn-trang-chu .san-pham .name-sp {
+        font-size: 14px;
+    }
+    .ctn-trang-chu .san-pham .sao {
+        font-size: 6px;
+    }
+}

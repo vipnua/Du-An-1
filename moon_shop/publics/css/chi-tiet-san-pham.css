@@ -1,0 +1,236 @@
+@font-face {
+    font-family: saira;
+    src: url('../fonts/saira.ttf');
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.ctn-chi-tiet {
+    font-family: 'saira';
+    margin-top: 20px;
+}
+
+.ctn-chi-tiet .img-sp {
+    float: left;
+}
+
+.ctn-chi-tiet .thong-tin-sp {
+    float: right;
+}
+
+
+/* Tùy chọn thêm món */
+
+.tuy-chon {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tuy-chon .img-tuy-chon img {
+    border: 0.5px solid black;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.tuy-chon .mon-tuy-chon p {
+    margin: 0px;
+    text-align: center;
+}
+
+.tuy-chon .mon-tuy-chon .gia-tuy-chon {
+    font-size: 13px;
+    color: rgb(235, 158, 64);
+}
+
+.tuy-chon .mon-tuy-chon .name-tuy-chon {
+    font-size: 15px;
+}
+
+
+/* Món tương tự */
+
+.ctn-chi-tiet .img-big {
+    padding: 5px;
+}
+
+.ctn-chi-tiet .img-big img {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 1px 1px 5px black;
+}
+
+.ctn-chi-tiet .img-small {
+    padding: 5px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ctn-chi-tiet .img-small .img {
+    padding: 0px 5px;
+}
+
+.ctn-chi-tiet .img-small .img img {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: 0.5px solid black;
+}
+
+.thong-tin-sp .gia {
+    float: left;
+    font-size: 18px;
+}
+
+.thong-tin-sp .sao {
+    font-size: 10px;
+    float: left;
+    margin-left: 35px;
+    margin-top: 3px;
+}
+
+h5 {
+    text-align: center;
+}
+
+.ctn-chi-tiet .thong-tin-sp .so-luong {
+    clear: both;
+    float: left;
+    margin: 5px 0px;
+}
+
+.ctn-chi-tiet .thong-tin-sp .so-luong button {
+    width: 25px;
+    border: 0.5px solid black;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.mo-ta-sp {
+    clear: both;
+}
+
+.so-luong {
+    clear: both;
+}
+
+.mua {
+    padding: 10px 0px;
+    clear: both;
+}
+
+.mua button {
+    background-color: rgb(235, 158, 64);
+    margin-right: 35px;
+    border: 0.5px solid black;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.mua button:hover {
+    box-shadow: 1px 1px 3px black;
+}
+
+h5 {
+    clear: both;
+    padding: 10px 0px;
+    margin: 0px;
+}
+
+.san-pham-tuong-tu {
+    clear: both;
+    font-family: 'saira';
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.san-pham-tuong-tu .san-pham {
+    padding: 10px;
+}
+
+.san-pham-tuong-tu .img-sp img {
+    border: 1px solid black;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.san-pham-tuong-tu .name-sp {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 5px 0px 10px 0px;
+}
+
+.san-pham-tuong-tu .gia {
+    float: left;
+}
+
+.san-pham-tuong-tu .sao {
+    font-size: 8px;
+    float: right;
+}
+
+.san-pham-tuong-tu .ctn-button {
+    display: block;
+    width: 100%;
+}
+
+.san-pham-tuong-tu button {
+    font-size: 14px;
+    border: 0.5px solid black;
+    background-color: rgb(235, 158, 64);
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    /* padding: 0px 5px; */
+}
+
+.san-pham-tuong-tu .san-pham .mua-ngay {
+    clear: both;
+    float: left;
+}
+
+.san-pham-tuong-tu .san-pham .them-vao-gio-hang {
+    float: right;
+}
+
+@media screen and (max-width: 768px) {
+    .san-pham button {
+        font-size: 9px;
+    }
+    .san-pham .gia {
+        font-size: 13px;
+    }
+    .san-pham .name-sp {
+        font-size: 14px;
+    }
+    .san-pham .sao {
+        font-size: 6px;
+    }
+}

@@ -1,0 +1,112 @@
+.ctn-gio-hang .ctn-desktop {
+    text-align: center;
+}
+
+.ctn-mobile {
+    display: none;
+}
+
+.ctn-gio-hang .ctn-desktop .img-sp {
+    float: left;
+    padding: 10px;
+}
+
+.ctn-gio-hang .ctn-desktop .img-sp img {
+    border: 1px solid black;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.ctn-gio-hang .ctn-desktop .name-sp {
+    margin-top: 15px;
+    text-align: left;
+    float: right;
+    font-size: 18px;
+}
+
+.ctn-gio-hang .ctn-desktop .btn-so-luong button {
+    width: 25px;
+    border: 0.5px solid black;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.ctn-gio-hang .vocher .text-vocher {
+    float: right;
+}
+
+.ctn-gio-hang .text-vocher p {
+    float: left;
+}
+
+.ctn-gio-hang .vocher a {
+    float: right;
+    padding: 0px 25px;
+    text-decoration: none;
+}
+
+.ctn-gio-hang .text-thanh-toan {
+    float: right;
+}
+
+.ctn-gio-hang .text-thanh-toan p {
+    float: left;
+}
+
+.ctn-gio-hang .text-thanh-toan button {
+    float: right;
+    width: 120px;
+    background-color: rgb(235, 158, 64);
+    border: 0.5px solid black;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .ctn-desktop {
+        display: none;
+    }
+    .ctn-mobile {
+        margin: 25px 0px;
+        display: block;
+        display: flex;
+        flex-direction: row;
+    }
+    .ctn-mobile .img-sp img {
+        border: 1px solid black;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+    .ctn-mobile .name-sp {
+        float: left;
+        margin-left: 20px;
+    }
+    .ctn-mobile .name-sp p {
+        font-size: 13px;
+        color: red;
+    }
+    .ctn-mobile .btn-so-luong {
+        font-size: 13px;
+    }
+    .ctn-mobile .btn-so-luong button {
+        width: 25px;
+        border: 0.5px solid black;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+    }
+}
