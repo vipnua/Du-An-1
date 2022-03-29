@@ -1,5 +1,6 @@
 <?php
 require_once("../../../publics/link.php")
+
 ?>
 
 <link rel="stylesheet" href="../../../publics/css/header.css">
@@ -27,9 +28,10 @@ require_once("../../../publics/link.php")
                 <hr>
             </li>
         </ul>
+        <!-- đây là code search-->
         <ul class="menu col">
             <div class="container-fluid">
-                <form class="d-flex" method="post">
+                <form class="d-flex" method="post" action="search.php">
                     <input class="form-control me-2" type="search" name="search" placeholder="Tìm kiếm món ăn" aria-label="Search">
                     <input type="submit" name="submit" class="input-group-text border-0" id="search-addon">
                         <i class="fas fa-search"></i>
@@ -38,15 +40,24 @@ require_once("../../../publics/link.php")
                 </form>
             </div>
         </ul>
+            <!-- END code search-->
 
     </header>
 </div>
 <?php
-
-if(isset($_POST["submit"])){
+if(isset($_REQUEST["submit"])){
     $search=$_POST["search"];
-    getSanpham_by_name($search);
+    if(empty($search)){
+       // echo "Yeu cau nhap du lieu";
+    } else{
+       $sanpham = getSanpham_by_name($search);
+       $lishdanhsach = $sanpham;
+        getConnect();
+        // Đếm số đong trả về trong sql.
+        //$num = mysql_num_rows($sql);
+    }
 }
+
 
 
 ?>

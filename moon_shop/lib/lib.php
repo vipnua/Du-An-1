@@ -67,7 +67,7 @@ function addSanpham($id,$gia_sp){
 }
 /*giang*/
 function getSanpham_by_name($search) {
-    $sql ="SELECT * FROM san_pham WHERE ten_san_pham = '$search''%'";
+    $sql = "SELECT * FROM san_pham WHERE ten_san_pham like '%$search%'";
     return getExecute($sql);
 }
 /*Endgiang*/
