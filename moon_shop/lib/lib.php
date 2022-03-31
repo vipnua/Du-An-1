@@ -70,6 +70,10 @@ function getSanpham_by_name($search) {
     $sql = "SELECT * FROM san_pham WHERE ten_san_pham like '%$search%'";
     return getExecute($sql);
 }
+function getAllUser(){
+    $sql = ("SELECT * FROM User");
+    return getExecute($sql);
+}
 /*Endgiang*/
 // var_dump(getSanpham_by_loai(2));
  
