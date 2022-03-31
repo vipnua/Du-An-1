@@ -17,13 +17,9 @@
         <div class="row mb menu">
             <ul>
                 <li><a href="index.php">Trang chủ</a></li>
-                <li><a href="index.php">Quản lý khách hàng</a></li>
-                <li><a href="index.php">Trang chủ</a></li>
+                <li><a href="index.php?act=listuser">Quản lý khách hàng</a></li>
+                <li><a href="index.php?act=listvocher">Quản lý Vocher</a></li>
                 <li><a href="index.php">Trang chủ</a></li>
                 <li><a href="index.php">Trang chủ</a></li>
             </ul>
         </div>
-    </div>
-</body>
-
-</html>

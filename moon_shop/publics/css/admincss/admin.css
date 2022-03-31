@@ -1,3 +1,25 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 0.7vw;
+}
+
+.header {
+    background-color: aquamarine;
+    border: 1px #090 solid;
+    color: blue;
+    border-radius: 5px;
+}
+
+.footer {
+    background-color: aquamarine;
+    border: 1px #090 solid;
+    font-size: 0.8vw;
+    color: blue;
+    border-radius: 5px;
+    padding: 20px;
+}
+
 .boxcenter {
     width: 60%;
     margin: 0 auto;
@@ -5,6 +27,19 @@
 
 .mb {
     margin-bottom: 20px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+
+/*Menu*/
+
+.menu {
+    background-color: #ccc;
+    color: #ccc;
+    border-radius: 5px;
 }
 
 .menu ul {
@@ -28,9 +63,17 @@
     font-size: 0.9vw;
 }
 
+
+/*end Menu*/
+
 .row {
     float: left;
     width: 100%;
+}
+
+.header h1 {
+    margin: 20px;
+    font-size: 1.2vw;
 }
 
 .headeradmin {
@@ -53,17 +96,21 @@
     padding: 0px 20px;
 }
 
-.frmduser table {
+.frmdsuser table {
     width: 100%;
     border-collapse: collapse;
 }
 
-.frmduser table th {
+.frmdsuser table th {
     padding: 20px;
     background-color: #ccc;
 }
 
-.frmduser table td {
+.frmdsuser table td {
     padding: 10px 20px;
     border: 1px #ccc solid;
+}
+
+.frmcontent {
+    padding: 20px 0px;
 }

@@ -66,12 +66,46 @@ function addSanpham($id,$gia_sp){
     return getExecute($sql);
 }
 /*giang*/
+//tim kiem san pham theo ten
 function getSanpham_by_name($search) {
     $sql = "SELECT * FROM san_pham WHERE ten_san_pham like '%$search%'";
     return getExecute($sql);
 }
+//lay tat ca user
 function getAllUser(){
     $sql = ("SELECT * FROM User");
+    return getExecute($sql);
+}
+//update vai tro
+function update_user_vaitro($id,$Vai_tro){
+    $sql="Update user SET Vai_tro='$Vai_tro' WHERE id = $id";
+    return getExecute($sql);
+}
+//loat 1 user
+function pdo_query_one($sql){
+    $sql_args = array_slice(func_get_args(),1);
+    try{$conn = getConnect();
+        $stmt = $conn -> prepare($sql);
+        $stmt -> execute($sql_args);
+        $row=$stmt->fetch(PDO::FETCH_ASSOC);
+        return $row;
+    }catch(PDOException $e){
+        throw $e;
+    }finally{
+        unset($conn);
+    }
+}
+function loadone_user($id){
+    $sql="select * from user where id=".$id;
+    $us= pdo_query_one($sql);
+    return $us;
+}
+function delete_user($id){
+    $sql="delete from user where id=".$id;
+    getExecute($sql);
+}
+function getAllvocher(){
+    $sql = "SELECT * FROM vocher";
     return getExecute($sql);
 }
 /*Endgiang*/
