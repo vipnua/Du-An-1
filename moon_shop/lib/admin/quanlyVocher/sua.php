@@ -2,7 +2,7 @@
 if(is_array($vc)){
     extract($vc);
 }
-var_dump($vc);
+
 ?>
 <div class="row">
             <div class="row frmtitle">
@@ -17,12 +17,12 @@ var_dump($vc);
                     <div class="row mb10">
                     Sản phẩm áp dụng <br>
                         <select name="sanphamapdung" id="idsanpham">
-                            <option value="<?php echo $id_pham ?>"><?=$San_pham_ap_dung ?></option>
+                            <option value="<?php echo $id_pham ?>"><?=$san_pham_ap_dung ?></option>
                         </select>
                     </div>
                     <div class="row mb10">
                         Mô Tả<br>
-                        <textarea name="mota" cols="30" rows="10"><?=$Mo_ta?></textarea>
+                        <textarea name="mota" cols="30" rows="10"><?=$mo_ta?></textarea>
                     </div>
                     <div class="row mb10">
                         <input type="hidden" name="id_vocher" value="<?=$id_vocher?>">

@@ -36,7 +36,7 @@
           <p class="text-muted mb-4">Đừng quên để lại email để cập nhật những ưu đãi mới nhất từ chúng tôi nhé!</p>
           <div class="p-1 rounded border">
             <div class="input-group">
-              <input type="email" placeholder="Email" aria-describedby="button-addon1" class="form-control border-0 shadow-0">
+              <input type="email" placeholder="email" aria-describedby="button-addon1" class="form-control border-0 shadow-0">
               <div class="input-group-append">
                 <button id="button-addon1" type="submit" class="btn btn-link"><i class="fa fa-paper-plane"></i></button>
               </div>

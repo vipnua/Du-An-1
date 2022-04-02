@@ -8,7 +8,7 @@
             <table>
                 <tr>
                     <th></th>
-                    <th>ID</th>
+                    <th>id</th>
                     <th>Giảm giá</th>
                     <th>Sản phẩm áp dụng</th>
                     <th>Mô Tả</th>
@@ -23,9 +23,9 @@
                          <tr>
                             <td><input type="checkbox" name="" id="' . $id_vocher . '"></td>
                             <td>' . $id_vocher . '</td>              
-                            <td>' . $Giam_gia . '</td>
-                            <td>' . $San_pham_ap_dung . '</td>
-                            <td>' . $Mo_ta . '</td>
+                            <td>' . $giam_gia . '</td>
+                            <td>' . $san_pham_ap_dung . '</td>
+                            <td>' . $mo_ta . '</td>
                             <td> <a href="'.$suavocher.'"><input type="button" value="Sửa"></a> <a href="'.$xoavocher.'"><input type="button" value="Xóa"></a></td>   
                              </tr>
                         ';

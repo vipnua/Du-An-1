@@ -77,12 +77,16 @@ function getAllUser(){
     return getExecute($sql);
 }
 //update vai tro
-function update_user_vaitro($id,$Vai_tro){
-    $sql="Update user SET Vai_tro='$Vai_tro' WHERE id = $id";
+function update_user_vaitro($id,$vai_tro){
+    $sql="Update user SET vai_tro='$vai_tro' WHERE id = $id";
     return getExecute($sql);
 }
-function updatevocher($id_vocher,$Giam_gia,$San_pham_ap_dung,$Mo_ta){
-    $sql="Update vocher SET Giam_gia='$Giam_gia',San_pham_ap_dung='$San_pham_ap_dung', Mo_ta ='$Mo_ta' WHERE id_vocher = $id_vocher";
+function updatevocher($id_vocher,$giam_gia,$san_pham_ap_dung,$mo_ta){
+    $sql="Update vocher SET giam_gia='$giam_gia',san_pham_ap_dung='$san_pham_ap_dung', mo_ta ='$mo_ta' WHERE id_vocher = $id_vocher";
+    return getExecute($sql);
+}
+function updatecombo($id_combo,$san_pham,$gia_combo,$mo_ta){
+    $sql="Update combo SET san_pham='$san_pham',gia_combo='$gia_combo', mo_ta ='$mo_ta' WHERE id_combo = $id_combo";
     return getExecute($sql);
 }
 //loat 1 user
@@ -109,6 +113,11 @@ function loadone_vocher($id_vocher) {
     $vc= pdo_query_one($sql);
     return $vc;
 }
+function loadone_combo($id_combo) {
+    $sql="select * from combo where id_combo=".$id_combo;
+    $cb= pdo_query_one($sql);
+    return $cb;
+}
 function delete_user($id){
     $sql="delete from user where id=".$id;
     getExecute($sql);
@@ -117,13 +126,27 @@ function delete_vocher($id_vocher){
     $sql="delete from vocher where id_vocher=".$id_vocher;
     getExecute($sql);
 }
+function delete_combo($id_combo){
+    $sql="delete from combo where id_combo=".$id_combo;
+    getExecute($sql);
+}
 function getAllvocher(){
     $sql = "SELECT * FROM vocher";
     return getExecute($sql);
 }
-function insertvocher($Giam_gia,$San_pham_ap_dung,$Mo_ta){
-    $sql = "insert into vocher(Giam_gia,San_pham_ap_dung,Mo_ta) 
-        VALUES ('$Giam_gia','$San_pham_ap_dung','$Mo_ta')";
+function insertvocher($giam_gia,$san_pham_ap_dung,$mo_ta){
+    $sql = "insert into vocher(giam_gia,san_pham_ap_dung,mo_ta) 
+        VALUES ('$giam_gia','$san_pham_ap_dung','$mo_ta')";
+    return getExecute($sql);
+}
+function insertcombo($san_pham,$gia_combo,$mo_ta){
+    $sql = "insert into combo(san_pham,gia_combo,mo_ta) 
+        VALUES ('$san_pham','$gia_combo','$mo_ta')";
+    return getExecute($sql);
+}
+
+function getAllcombo(){
+    $sql = "SELECT * FROM combo";
     return getExecute($sql);
 }
 
