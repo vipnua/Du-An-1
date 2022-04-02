@@ -17,8 +17,8 @@
                 <?php
                 foreach ($listvocher as $vocher) {
                     extract($vocher);  
-                    $suavocher = "index.php?act=suavocher&id=" . $id_vocher;
-                    $xoavocher = "index.php?act=xoavocher&id=" . $id_vocher;                        
+                    $suavocher = "index.php?act=suavocher&id_vocher=" . $id_vocher;
+                    $xoavocher = "index.php?act=xoavocher&id_vocher=" . $id_vocher;                        
                     echo '
                          <tr>
                             <td><input type="checkbox" name="" id="' . $id_vocher . '"></td>
@@ -38,10 +38,8 @@
             <input type="button" value="Chọn tất cả" id="checkbox_all">
             <input type="button" value="Bỏ chọn tất cả">
             <input type="button" value="Xóa các mục đã chọn">
-            <a href="index.php?act=addvocher"><input type="button" value="Thêm mới vocher"></a>
-            <input type="submit" name="" value="Đồng ý">
+            <a href="index.php?act=addvocher"><input type="button" value="ADD VOCHER"></a>
             <?php if(isset($thongbao)&&($thongbao="")) echo $thongbao?>
-            <?php var_dump($_POST); ?>
         </div>
         </form>
     </div>

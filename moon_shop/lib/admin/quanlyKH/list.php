@@ -22,7 +22,8 @@
                 <?php
                 
                 foreach ($listuser as $user) {
-                    extract($user);     
+                    extract($user);
+                    var_dump($user);     
                     $suauser = "index.php?act=suauser&id=" . $id;
                     $xoauser = "index.php?act=xoauser&id=" . $id;                        
                     echo '
@@ -36,12 +37,19 @@
                             <td>' . $Hinh_anh . '</td>
                             <td>' . $So_dien_thoai . '</td>
                             <td>' . $Dia_chi . '</td>
-                            <td> '. $Vai_tro .'  </td>
-                            <td> <a href="'.$suauser.'"><input type="button" value="Sửa"></a> <a href="'.$xoauser.'"><input type="button" value="Xóa"></a></td>
+                            <td>
+                                <select id="vai_tro" name="vaitro">
+                                <option value="'.$Vai_tro.'">'.$Vai_tro.'</option>
+                                <option value="0">Quản Lý</option>
+                                <option value="1">Khách Hàng</option>      
+                                 </select>
+                            </td>
+                            <td><a href="'.$xoauser.'"><input type="button" value="Xóa"></a></td>
                             
                              </tr>
                         ';
                                         }
+                        
                 ?>
 
             </table>
@@ -50,19 +58,10 @@
             <input type="button" value="Chọn tất cả" id="checkbox_all">
             <input type="button" value="Bỏ chọn tất cả">
             <input type="button" value="Xóa các mục đã chọn">
-            <input type="submit" name="" value="Đồng ý">
+            <input type="submit" name="dongy" value="Đồng ý">
             <?php if(isset($thongbao)&&($thongbao="")) echo $thongbao?>
-            <?php var_dump($_POST); ?>
         </div>
         </form>
     </div>
     
 </div>
-<script>
-        var checkboxall = $('#checkbox_all');
-        //checkbox all clicked
-        console.log(checkboxall);
-        checkboxall.change(function(){
-        console.log(math.random())
-        });
-    </script>

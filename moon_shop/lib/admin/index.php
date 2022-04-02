@@ -10,14 +10,11 @@ if(isset($_GET['act'])){
           $listuser = getAllUser();     
           include "quanlyKH/list.php";  
             break;
-        case 'suauser':
+        case 'suavaitro':
             if(isset($_GET['id'])&&($_GET['id']>0)){
                 $us= loadone_user($_GET['id']);
             }
-            include "quanlyKH/sua.php";   
-            break;  
-        case 'updateuser':
-            if(isset($_POST['suavaitro'])&&($_POST['suavaitro'])){
+            if(isset($_POST['dongy'])&&($_POST['dongy'])){
                 $id = $_POST['id'];
                 $Vai_tro = $_POST['vaitro'];
                 update_user_vaitro($Vai_tro,$id);
@@ -25,6 +22,9 @@ if(isset($_GET['act'])){
             }
             $listuser=getAllUser();
             include "quanlyKH/list.php";
+            break;  
+        case 'updateuser':
+            
             break;
             case 'xoauser':
                 if(isset($_GET['id'])&&($_GET['id']>0)){
@@ -41,9 +41,44 @@ if(isset($_GET['act'])){
                 break;
 
             case'addvocher':
+                if(isset($_POST['addvocher'])&&($_POST['addvocher'])){
+                    $Giam_gia=$_POST['giamgia'];
+                    $San_pham_ap_dung=$_POST['sanphamapdung'];
+                    $Mo_ta=$_POST['mota'];
+                    insertvocher($Giam_gia, $San_pham_ap_dung, $Mo_ta);
+                    $thongbao="Thêm thành công";
+                }
                 $listvocher = getAllvocher();  
-                    include "quanlyVocher/add.php";
+                include "quanlyVocher/add.php";
                 break;
+                case 'suavocher':
+                    if(isset($_GET['id_vocher'])&&($_GET['id_vocher']>0)){
+                        $vc= loadone_vocher($_GET['id_vocher']);
+                    }
+                    include "quanlyVocher/sua.php";   
+                    break;
+            case 'capnhatvocher':
+                if(isset($_POST['capnhatvocher'])&&($_POST['capnhatvocher'])){
+                    $id_vocher = $_POST['id_vocher'];
+                    $Giam_gia=$_POST['giamgia'];
+                    $San_pham_ap_dung=$_POST['sanphamapdung'];
+                    $Mo_ta=$_POST['mota'];
+                
+                    updatevocher($id_vocher,$Giam_gia,$San_pham_ap_dung,$Mo_ta);
+                    $thongbao="Cập nhật thành công";
+                }
+                //$listsanpham=loadall_sanpham();
+                $listvocher = getAllvocher();     
+                include "quanlyVocher/list.php";  
+                break;
+                case 'xoavocher':
+                    if(isset($_GET['id_vocher'])&&($_GET['id_vocher']>0)){
+                        delete_vocher($_GET['id_vocher']);
+                    }
+                    $listvocher = getAllvocher();
+                    include "quanlyVocher/list.php";
+                    $thongbao="xoa thanh cong";
+                    break;
 
     }
 }
