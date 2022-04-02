@@ -38,7 +38,7 @@
             <input type="button" value="Chọn tất cả" id="checkbox_all">
             <input type="button" value="Bỏ chọn tất cả">
             <input type="button" value="Xóa các mục đã chọn">
-            <input type="button" value="Thêm mới vocher">
+            <a href="index.php?act=addvocher"><input type="button" value="Thêm mới vocher"></a>
             <input type="submit" name="" value="Đồng ý">
             <?php if(isset($thongbao)&&($thongbao="")) echo $thongbao?>
             <?php var_dump($_POST); ?>

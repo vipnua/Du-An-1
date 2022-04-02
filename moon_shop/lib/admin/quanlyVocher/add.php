@@ -6,11 +6,13 @@
                 <form action="index.php?act=adddm" method="post">
                     <div class="row mb10">
                         Giảm giá<br>
-                        <input type="text" name="giamgia">
+                        <input type="number" min="1" max="100" name="phamtram">
                     </div>
                     <div class="row mb10">
-                        Sản phẩm áp dụng<br>
-                        <input type="text" name="sp">
+                    Sản phẩm áp dụng <br>
+                        <select name="namesanpham" id="idsanpham">
+                            <option value="idsanpham">$biến in sản phẩm ra tại đây</option>
+                        </select>
                     </div>
                     <div class="row mb10">
                         Mô Tả<br>

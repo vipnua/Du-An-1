@@ -40,5 +40,10 @@ if(isset($_GET['act'])){
                 include "quanlyVocher/list.php";  
                 break;
 
+            case'addvocher':
+                $listvocher = getAllvocher();  
+                    include "quanlyVocher/add.php";
+                break;
+
     }
 }
