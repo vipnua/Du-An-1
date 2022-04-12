@@ -9,38 +9,16 @@ if(is_array($us)){
     </div>
     <div class="row frmcontent">
         <form action="index.php?act=updateuser" method="post">
+            
             <div class="row mb10">
-                Tên đăng nhập
-                <input type="text" name="tendangnhap" value="<?php echo $ten_dang_nhap;?>" disabled>
-            </div>
-            <div class="row mb10">
-                Họ Tên
-                <input type="text" name="hoten" value="<?php echo $ho_ten?>"disabled>
-            </div>
-            <div class="row mb10">
-                email
-                <input type="text" name="email" value="<?php echo $email?>"disabled>
-            </div>
-            <div class="row mb10">
-                Mật Khẩu
-                <input type="text" name="matkhau" value="<?php echo $mat_khau?>"disabled>
-            </div>
-            <div class="row mb10">
-               Hình ảnh 
-                <input type="file" name="hinhanh" value="<?php echo $hinh_anh?>"disabled>
-            </div>
-            <div class="row mb10">
-                Số điện thoại
-                <input type="text" name="sdt" value="<?php echo $so_dien_thoai?>"disabled>
-            </div>
-            <div class="row mb10">
-                Địa chỉ
-                <input type="text" name="diachi" value="<?php echo $dia_chi?>"disabled>
-            </div>
-            <div class="row mb10">
-                vai trò           
+                VAI TRÒ        
                 <br>
-                <input type="number" name="vaitro" min="1" max="2" value="<?=$vai_tro?>" >
+                <? if($vai_tro==1)$vai_tro1="Khách hàng";else $vai_tro1="Quản lý"; ?>
+                <select name="vaitro" id="" required>
+                        <option value="">--CHỌN LẠI--</option>
+                        <option value="1">Khách hàng</option>
+                        <option value="2">Quản lý</option>
+                </select>
             </div>
             </div>
         </div>

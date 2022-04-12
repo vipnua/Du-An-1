@@ -23,8 +23,15 @@
                 
                 foreach ($listuser as $user) {
                     extract($user);     
+                    $hinhpath="../../lib/admin/quanlyKH/photo/".$hinh_anh;
+                    if(is_file($hinhpath)){
+                        $hinh_anh="<img src='".$hinhpath."' height='80'>";
+                    }else{
+                        $hinh_anh="no photo";
+                    }
+                    if($vai_tro==1)$vai_tro1="Khách hàng";else $vai_tro1="Quản lý";
                     $suauser = "index.php?act=suauser&id=" . $id;
-                    $xoauser = "index.php?act=xoauser&id=" . $id;                        
+                    $xoauser = "index.php?act=xoauser&id=" . $id;                    
                     echo '
                          <tr>
                             <td><input type="checkbox" name="" id="' . $id . '"></td>
@@ -35,10 +42,10 @@
                             <td>' . $mat_khau . '</td>
                             <td>' . $hinh_anh . '</td>
                             <td>' . $so_dien_thoai . '</td>
-                            <td>' . $dia_chi . '</td>
+                            <td>' . $dia_chi . '</td>      
                             <td>
-                                '.$vai_tro.'
-                            </td>
+                                '.$vai_tro1.'
+                            </td>                      
                             <td><a href="'.$xoauser.'"><input type="button" value="Xóa"></a>
                             <a href="'.$suauser.'"><input type="button" value="Sửa"></a></td>
                             

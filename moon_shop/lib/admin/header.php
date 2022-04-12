@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
     <link rel="stylesheet" href="../../../moon_shop/publics/css/admincss/admin.css">
+
 </head>
 
 <body>
@@ -16,10 +17,10 @@
         </div>
         <div class="row mb menu">
             <ul>
-                <li><a href="index.php">Trang chủ</a></li>
-                <li><a href="index.php?act=listuser">Quản lý khách hàng</a></li>
-                <li><a href="index.php?act=listvocher">Quản lý Vocher</a></li>
-                <li><a href="index.php?act=listcombo">Quản lý Combo</a></li>
-                <li><a href="index.php">Trang chủ</a></li>
+                <li><a href="index.php?act=listorder">THEO DÕI ĐƠN HÀNG</a></li>
+                <li><a href="index.php?act=listuser">QUẢN LÝ KHÁCH HÀNG</a></li>
+                <li><a href="index.php?act=listvocher">QUẢN LÝ VOCHER</a></li>
+                <li><a href="index.php?act=listcombo">QUẢN LÝ COMBO</a></li>
+                <li><a href="index.php?act=listtuychon">QUẢN LÝ TÙY CHỌN</a></li>
             </ul>
         </div>

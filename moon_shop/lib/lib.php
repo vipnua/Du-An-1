@@ -81,14 +81,30 @@ function update_user_vaitro($id,$vai_tro){
     $sql="Update user SET vai_tro='$vai_tro' WHERE id = $id";
     return getExecute($sql);
 }
-function updatevocher($id_vocher,$giam_gia,$san_pham_ap_dung,$mo_ta){
-    $sql="Update vocher SET giam_gia='$giam_gia',san_pham_ap_dung='$san_pham_ap_dung', mo_ta ='$mo_ta' WHERE id_vocher = $id_vocher";
+function updatevocher($ten_vocher,$giam_gia, $ngay_tao_vocher,$ngay_bat_dau,$ngay_ket_thuc,$mo_ta,$hinh_anh,$id_vocher){
+    if($hinh_anh!=""){$sql="Update vocher SET ten_vocher='$ten_vocher',giam_gia='$giam_gia',ngay_tao_vocher='$ngay_tao_vocher',ngay_bat_dau='$ngay_bat_dau',ngay_ket_thuc='$ngay_ket_thuc', mo_ta ='$mo_ta',hinh_anh='$hinh_anh' WHERE id_vocher = $id_vocher";}else{$sql="Update vocher SET ten_vocher='$ten_vocher',giam_gia='$giam_gia',ngay_tao_vocher='$ngay_tao_vocher',ngay_bat_dau='$ngay_bat_dau',ngay_ket_thuc='$ngay_ket_thuc', mo_ta ='$mo_ta' WHERE id_vocher = $id_vocher";
+    }
+    
     return getExecute($sql);
 }
 function updatecombo($id_combo,$san_pham,$gia_combo,$mo_ta){
     $sql="Update combo SET san_pham='$san_pham',gia_combo='$gia_combo', mo_ta ='$mo_ta' WHERE id_combo = $id_combo";
     return getExecute($sql);
 }
+
+function updatetrangthai($id_chi_tiet,$trang_thai){
+    $sql="Update don_hang SET trang_thai ='$trang_thai' WHERE id_chi_tiet = $id_chi_tiet";
+    return getExecute($sql);
+}
+function updatetuychon($id_tuy_chon,$ten_mon,$gia_mon,$mo_ta,$so_luong,$hinh_anh){
+    if($hinh_anh!=""){
+          $sql="Update tuy_chon SET ten_mon='$ten_mon',gia_mon='$gia_mon', mo_ta ='$mo_ta',so_luong='$so_luong',hinh_anh='$hinh_anh' WHERE id_tuy_chon = $id_tuy_chon";}
+    else{
+        $sql="Update tuy_chon SET ten_mon='$ten_mon',gia_mon='$gia_mon', mo_ta ='$mo_ta',so_luong='$so_luong' WHERE id_tuy_chon = $id_tuy_chon";}
+  
+    return getExecute($sql);
+}
+
 //loat 1 user
 function pdo_query_one($sql){
     $sql_args = array_slice(func_get_args(),1);
@@ -108,8 +124,8 @@ function loadone_user($id){
     $us= pdo_query_one($sql);
     return $us;
 }
-function loadone_vocher($id_vocher) {
-    $sql="select * from vocher where id_vocher=".$id_vocher;
+function loadone_vocher($ten_vocher) {
+    $sql="select * from vocher where id_vocher=".$ten_vocher;
     $vc= pdo_query_one($sql);
     return $vc;
 }
@@ -117,6 +133,11 @@ function loadone_combo($id_combo) {
     $sql="select * from combo where id_combo=".$id_combo;
     $cb= pdo_query_one($sql);
     return $cb;
+}
+function loadone_table($table,$where,$id) {
+    $sql="select * from  $table where $where=".$id;
+    $get= pdo_query_one($sql);
+    return $get;
 }
 function delete_user($id){
     $sql="delete from user where id=".$id;
@@ -130,13 +151,21 @@ function delete_combo($id_combo){
     $sql="delete from combo where id_combo=".$id_combo;
     getExecute($sql);
 }
+function delete_tuychon($id){
+    $sql="delete from tuy_chon where id_tuy_chon=".$id;
+    getExecute($sql);
+}
+function delete_table($table,$where,$id){
+    $sql="delete from $table where $where=".$id;
+    getExecute($sql);
+}
 function getAllvocher(){
     $sql = "SELECT * FROM vocher";
     return getExecute($sql);
 }
-function insertvocher($giam_gia,$san_pham_ap_dung,$mo_ta){
-    $sql = "insert into vocher(giam_gia,san_pham_ap_dung,mo_ta) 
-        VALUES ('$giam_gia','$san_pham_ap_dung','$mo_ta')";
+function insertvocher($ten_vocher,$giam_gia,$ngay_tao_vocher,$ngay_ket_thuc,$mo_ta,$hinh_anh){
+    $sql = "insert into vocher(ten_vocher,giam_gia,ngay_tao_vocher,ngay_ket_thuc,mo_ta,hinh_anh)
+     values('$ten_vocher','$giam_gia','$ngay_tao_vocher','$ngay_ket_thuc','$mo_ta','$hinh_anh') ";
     return getExecute($sql);
 }
 function insertcombo($san_pham,$gia_combo,$mo_ta){
@@ -144,9 +173,16 @@ function insertcombo($san_pham,$gia_combo,$mo_ta){
         VALUES ('$san_pham','$gia_combo','$mo_ta')";
     return getExecute($sql);
 }
-
+function inserttuychon($ten_mon,$gia_mon,$mo_ta,$so_luong,$hinh_anh){
+    $sql = "insert into tuy_chon(ten_mon,gia_mon,mo_ta,so_luong,hinh_anh) values('$ten_mon','$gia_mon','$mo_ta','$so_luong','$hinh_anh')"; 
+    return getExecute($sql);
+}
 function getAllcombo(){
     $sql = "SELECT * FROM combo";
+    return getExecute($sql);
+}
+function getAll($table){
+    $sql = "SELECT * FROM $table";
     return getExecute($sql);
 }
 
