@@ -78,14 +78,14 @@ foreach ($san_pham as $value) {
 
 
     <hr style="opacity: 45%; width: 90%; margin-top: 35px;">
-    <div class="vocher col-12">
-        <div class="text-vocher col-md-4 col-12">
-            <p>Chọn vocher:</p>
-            <a href="#">Chọn vocher</a>
+    <div class="voucher col-12">
+        <div class="text-voucher col-md-4 col-12">
+            <p>Chọn voucher:</p>
+            <a href="#">Chọn voucher</a>
         </div>
     </div>
     <hr style="opacity: 45%; width: 90%;">
-    <div class="vocher col-12">
+    <div class="voucher col-12">
         <div class="text-thanh-toan col-md-7 col-12">
             <p>Tổng tiền cần thanh toán:</p>
             <button>Thanh toán</button>

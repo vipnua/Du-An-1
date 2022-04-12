@@ -37,15 +37,15 @@
     -o-border-radius: 4px;
 }
 
-.ctn-gio-hang .vocher .text-vocher {
+.ctn-gio-hang .voucher .text-voucher {
     float: right;
 }
 
-.ctn-gio-hang .text-vocher p {
+.ctn-gio-hang .text-voucher p {
     float: left;
 }
 
-.ctn-gio-hang .vocher a {
+.ctn-gio-hang .voucher a {
     float: right;
     padding: 0px 25px;
     text-decoration: none;

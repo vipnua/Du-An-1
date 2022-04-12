@@ -1,24 +1,26 @@
+<div class="row">
+    <div class="row frmtitle">
+        <h1>Danh sách Đơn hàng</h1>
+    </div>
 <div class="row frmcontent">
         <div class="row mb10 frmdsuser">
             <table>
                 <tr>
                     <th></th>
-                    <th>ID CHI TIẾT</th>
+                    <th>ID ĐƠN HÀNG</th>
                     <th>HỌ TÊN</th>
                     <th>ĐỊA CHỈ</th>
-                    <th>SỐ ĐIỆN THOẠI</th>
                     <th>THÀNH TIỀN(VND)</th>
                     <th>LƯU Ý</th>
                     <th>NGÀY ĐẶT</th>
-                    <th>GIỜ GIAO DỰ KIẾN</th>
                     <th>CHỈNH SỬA</th>
                     <th>TRẠNG THÁI</th>
                 </tr>
                 <?php               
                 foreach ($listtddh as $donhang) {
                     extract($donhang);     
-                    $suathedoi = "index.php?act=suathedoi&id=" . $id_chi_tiet;
-                    $xoadonhang = "index.php?act=xoadonhang&id=" . $id_chi_tiet;
+                    $suathedoi = "index.php?act=xoathedoi&id=" . $id_don_hang;
+                    $xoadonhang = "index.php?act=xoadonhang&id=" . $id_don_hang;
                     if ($trang_thai == 1) {
                         $trangthai = "CHƯA XÁC NHẬN";
                         //$strangthai = "XÁC NHẬN";
@@ -40,14 +42,12 @@
                    ?> <form action="" method="post">
                          <tr>
                             <td><input type="checkbox" name="" id=""></td>
-                            <td><?=$id_chi_tiet ?></td>
-                            <td><?= $ho_ten ?></td>
-                            <td><?= $dia_chi ?></td>
-                            <td><?= $so_dien_thoai ?></td>
-                            <td><?= $thanh_tien ?></td>
+                            <td><?=$id_don_hang ?></td>
+                            <td><?= $ten_khach_hang ?></td>
+                            <td><?= $dia_chi_giao_hang ?></td>
+                            <td><?= $thanh_tien ?> đ</td>
                             <td><?= $luu_y ?></td>
                             <td><?= $ngay_dat_hang ?></td>
-                            <td><?= $gio_giao_du_kien ?></td>
                             <td><a href="<?=$xoadonhang?>"><input type="button" value="Xóa"></a>
                             </td>
                             <td><a href="<?=$suathedoi?>"><input type="button" value="<?=$trangthai?>"></a></td>

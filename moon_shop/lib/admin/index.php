@@ -11,14 +11,14 @@ if (isset($_GET['act'])) {
             include "quanlyKH/list.php";
             break;
         case 'suauser':
-            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+            if (isset($_GET['id']) && ($_GET['id']!='')) {
                 $us = loadone_user($_GET['id']);
             }
             include "quanlyKH/sua.php";
             break;
         case 'updateuser':
             if (isset($_POST['suavaitro']) && ($_POST['suavaitro'])) {
-                $id = $_POST['id'];
+                $id = $_POST['ten_dang_nhap'];
                 $vai_tro = $_POST['vaitro'];
                 update_user_vaitro($id, $vai_tro);
                 $thongbao = "sua thanh cong";
@@ -34,66 +34,64 @@ if (isset($_GET['act'])) {
             include "quanlyKH/list.php";
             $thongbao = "xoa thanh cong";
             break;
-            //vocher
-        case 'listvocher':
-            $listvocher = getAllvocher();
-            include "quanlyVocher/list.php";
+            //voucherrrrrrrrrrrrrrrrr
+        case 'listvoucher':
+            $listvoucher = getAllvoucher();
+            include "quanlyvoucher/list.php";
             break;
 
-        case 'addvocher':
-            if (isset($_POST['addvocher']) && ($_POST['addvocher'])) {
-                $ten_vocher = $_POST['tenvocher'];
-                $giam_gia = $_POST['giamgia'];
-                $ngay_tao_vocher = $_POST['ngaytao'];
-                $ngay_bat_dau = $_POST['ngaybatdau'];
-                $ngay_ket_thuc = $_POST['ngayketthuc'];
-                $mo_ta = $_POST['mota'];
-                $hinh_anh = $_FILES['hinh']['name'];
-                $target_dir = "../../lib/admin/quanlyVocher/photo/";
+        case 'addvoucher':
+            if (isset($_POST['addvoucher']) && ($_POST['addvoucher'])) {
+                $id_san_pham= $_POST['idsanpham'];
+                $ma_voucher= $_POST['mavoucher'];
+                $created_at = $_POST['createat'];
+                $updated_at = $_POST['updateat'];
+                $mota = $_POST['mota'];
+                $anh = $_FILES['hinh']['name'];
+                $target_dir = "../../lib/admin/quanlyvoucher/photo/";
                 $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
                 if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
                     //echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
                 } else {
                     // echo "Sorry, there was an error uploading your file.";
                 }
-                insertvocher($ten_vocher, $giam_gia, $ngay_tao_vocher, $ngay_ket_thuc, $mo_ta, $hinh_anh);
+                insertvoucher($id_san_pham, $ma_voucher, $created_at, $updated_at, $mota, $anh);
                 $thongbao = "Thêm thành công";
             }
-            $listvocher = getAllvocher();
-            include "quanlyVocher/add.php";
+            $listvoucher = getAllvoucher();
+            include "quanlyvoucher/add.php";
             break;
-        case 'suavocher':
-            if (isset($_GET['id_vocher']) && ($_GET['id_vocher'] != "")) {
-                $vc = loadone_vocher($_GET['id_vocher']);
+        case 'suavoucher':
+            if (isset($_GET['id']) && ($_GET['id'] >0)) {
+                $vc = loadone_voucher($_GET['id']);
             }
-            include "quanlyVocher/sua.php";
+            include "quanlyvoucher/sua.php";
             break;
-        case 'capnhatvocher':
-            if (isset($_POST['capnhatvocher']) && ($_POST['capnhatvocher'])) {
-                $id_vocher = $_POST['id_vocher'];
-                $ten_vocher = $_POST['tenvocher'];
-                $giam_gia = $_POST['giamgia'];
-                $ngay_tao_vocher = $_POST['ngaytao'];
-                $ngay_bat_dau = $_POST['ngaybatdau'];
-                $ngay_ket_thuc = $_POST['ngayketthuc'];
-                $mo_ta = $_POST['mota'];
-                $hinh_anh = $_FILES['hinh']['name'];
-                $target_dir = "../../lib/admin/quanlyVocher/photo/";
+        case 'capnhatvoucher':
+            if (isset($_POST['capnhatvoucher']) && ($_POST['capnhatvoucher'])) {
+                $id_voucher = $_POST['id_voucher'];
+                $id_san_pham= $_POST['idsanpham'];
+                $ma_voucher = $_POST['mavoucher'];
+                $created_at = $_POST['createdat'];
+                $updated_at = $_POST['updatedat'];
+                $mota = $_POST['mota'];           
+                $anh = $_FILES['hinh']['name'];
+                $target_dir = "../../lib/admin/quanlyvoucher/photo/";
                 $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
 
-                updatevocher($ten_vocher, $giam_gia, $ngay_tao_vocher, $ngay_bat_dau, $ngay_ket_thuc, $mo_ta, $hinh_anh, $id_vocher);
+                updatevoucher($id_san_pham, $ma_voucher, $created_at, $updated_at, $mota, $anh, $id_voucher);
                 $thongbao = "Cập nhật thành công";
             }
             //$listsanpham=loadall_sanpham();
-            $listvocher = getAllvocher();
-            include "quanlyVocher/list.php";
+            $listvoucher = getAllvoucher();
+            include "quanlyvoucher/list.php";
             break;
-        case 'xoavocher':
-            if (isset($_GET['id_vocher']) && ($_GET['id_vocher'] > 0)) {
-                delete_vocher($_GET['id_vocher']);
+        case 'xoavoucher':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                delete_voucher($_GET['id']);
             }
-            $listvocher = getAllvocher();
-            include "quanlyVocher/list.php";
+            $listvoucher = getAllvoucher();
+            include "quanlyvoucher/list.php";
             $thongbao = "xoa thanh cong";
             break;
             //combo
@@ -208,9 +206,9 @@ if (isset($_GET['act'])) {
             break;
         case 'capnhattrangthai':
                 if (isset($_POST['tt']) && ($_POST['tt'])) {
-                    $id_chi_tiet= $_POST['id_tt'];
+                    $id_don_hang= $_POST['id_tt'];
                     $trang_thai= $_POST['tt'];
-                    updatetrangthai($id_chi_tiet,$trang_thai);
+                    updatetrangthai($id_don_hang,$trang_thai);
                     $thongbao = "Cập nhật thành công";
                 }
                 //$listsanpham=loadall_sanpham();
@@ -219,16 +217,15 @@ if (isset($_GET['act'])) {
                 break;
         case 'suathedoi':           
                 if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-                    $get = loadone_table('don_hang', 'id_chi_tiet', $_GET['id']);     
+                    $get = loadone_table('don_hang', 'id_don_hang', $_GET['id']);     
                     include "quanlyDonhang/sua.php";
-
-                    updatetrangthai($id_san_pham,$trang_thai);                   
+                    updatetrangthai($id_don_hang,$trang_thai);                   
                 }             
 
             break;
-        case 'xoathedoi':
+        case 'xoadonhang':
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-                delete_table('don_hang','id_chi_tiet',$_GET['id']);
+                delete_table('don_hang','id_don_hang',$_GET['id']);
             }
             $listtddh = getALL('don_hang');
             include "quanlyDonhang/list.php";

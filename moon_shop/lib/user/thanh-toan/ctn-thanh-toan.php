@@ -76,7 +76,7 @@ $san_pham = getSanpham_by_id($id_sp);
     <div class="pvc col-12">
         <p>Phí vận chuyển (a):</p>
         <p>Tổng tiền đơn hàng (b):</p>
-        <p>vocher (c):</p>
+        <p>voucher (c):</p>
         <p>Thời gian giao hàng dự kiến:</p>
         <p>
             Tin nhắn:
@@ -84,7 +84,7 @@ $san_pham = getSanpham_by_id($id_sp);
         </p>
     </div>
     <hr style="opacity: 45%; width: 90%;">
-    <div class="vocher col-12">
+    <div class="voucher col-12">
         <div class="text-thanh-toan col-md-7 col-12">
             <p>Thành tiền (a + b -c):</p>
             <button>Thanh toán</button>

@@ -17,9 +17,9 @@
         </div>
         <div class="row mb menu">
             <ul>
-                <li><a href="index.php?act=listorder">THEO DÕI ĐƠN HÀNG</a></li>
+                <li><a href="index.php?act=listorder">QUẢN LÝ ĐƠN HÀNG</a></li>
                 <li><a href="index.php?act=listuser">QUẢN LÝ KHÁCH HÀNG</a></li>
-                <li><a href="index.php?act=listvocher">QUẢN LÝ VOCHER</a></li>
+                <li><a href="index.php?act=listvoucher">QUẢN LÝ VOUCHER</a></li>
                 <li><a href="index.php?act=listcombo">QUẢN LÝ COMBO</a></li>
                 <li><a href="index.php?act=listtuychon">QUẢN LÝ TÙY CHỌN</a></li>
             </ul>
