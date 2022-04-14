@@ -4,7 +4,7 @@ if (is_array($vc)) {
 }
 $hinhpath = "../../lib/admin/quanlyvoucher/photo/" . $anh;
 if (is_file($hinhpath)) {
-    $anh = "<img src='" . $hinhpath . "' height='80'>";
+    $anh = "<img src='" . $hinhpath . "' height='200' width='300'>";
 } else {
     $anh = "no photo";
 }
@@ -13,7 +13,7 @@ if (is_file($hinhpath)) {
     <div class="row frmtitle">
         <H1>SỬA VOUCHER</H1>
     </div>
-    <div class="row frmcontent">
+    <div class="">
         <form action="index.php?act=capnhatvoucher" method="post" enctype="multipart/form-data">
             <div class="row mrbt10">
                 ID SẢN PHẨM<br>
@@ -29,18 +29,20 @@ if (is_file($hinhpath)) {
             </div>
             <div class="row mrbt10">
                 CREATED AT<br>
-                <input type="datetime-local" name="createdat" value="<?= $created_at ?>">
+                <input type="datetime-local" name="createdat" value="<?= $created_at ?>"required>
             </div>
             <div class="row mrbt10">
                 UPDATED AT<br>
-                <input type="datetime-local" name="updatedat" value="<?= $updated_at ?>" >
+                <input type="datetime-local" name="updatedat" value="<?= $updated_at ?>" required>
             </div>
             <div class="row mrbt10">
                 SỬA HÌNH ẢNH<br>
-                <input type="file" name="hinh" style="with:auto;" ;value="<?= $anh ?>">
+                <input type="file" name="hinh" value="<?= $anh ?>">
                 <br>
-                <?= $anh ?>
+                
+                <div class="col text-center"><?= $anh ?></div>
             </div>
+
             <div class="row mrbt10">
                 Mô Tả<br>
                 <textarea name="mota" cols="30" rows="10"><?= $mota ?></textarea>

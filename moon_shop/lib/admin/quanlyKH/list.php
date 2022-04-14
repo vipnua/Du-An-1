@@ -53,8 +53,7 @@
             </table>
         </div>
         <div class="row">       
-
-            <?php if(isset($thongbao)&&($thongbao="")) echo $thongbao?>
+        <?php if(isset($thongbao)&&($thongbao="")) echo $thongbao?>
         </div>
     </div>
     

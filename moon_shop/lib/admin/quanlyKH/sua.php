@@ -16,20 +16,21 @@ if(is_array($us)){
                 <br>
                 <? if($vai_tro==1)$vai_tro1="Khách hàng";else $vai_tro1="Quản lý"; ?>
 
-                <select class="mrbt10" name="vaitro" id="" required>
+                <select name="vaitro" class="mrbt10"required>
                         <option value="">--CHỌN LẠI--</option>
                         <option value="1">Khách hàng</option>
                         <option value="2">Quản lý</option>
                 </select>
-                <input class="text-black bg-warning" type="submit" name="suavaitro" value="Đồng ý">
+                <input type="hidden" name="id" value="<?=$us['ten_dang_nhap'] ?>">
+                <input type="submit" name="suavaitro" value="Đồng ý" class="text-black bg-warning">
             </div>
             </div>
         </div>
         
         <div>       
-        <input type="hidden" name="id" value="<?=$ten_dang_nhap?>">
+        
         <td class="border">
-            <?php if(isset($thongbao)&&($thongbao="")) echo $thongbao?>
+                        
         </div>
         </form>
     </div>

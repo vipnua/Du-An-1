@@ -14,7 +14,7 @@
                     <th class="border">UPDATED AT</th>
                     <th class="border">HÌNH ẢNH</th>
                     <th class="border">MÔ TẢ</th>
-                    <th class="border"><a href="index.php?act=addvoucher"><input type="button" value="ADD voucher"></a></th>
+                    <th class="border"><a href="index.php?act=addvoucher"><input type="button" value="ADD voucher"class="bg-success mrbt10 mrbt10 rounded"></a></th>
                 </tr>              
                 <?php
                 
@@ -38,7 +38,7 @@
                             <td class="border">' . $updated_at . '</td>
                             <td class="border">' . $anh . '</td>
                             <td class="border">' . $mota . '</td>
-                            <td class="border"> <a href="'.$suavoucher.'"><input type="button" value="Sửa"></a> <a href="'.$xoavoucher.'"><input type="button" value="Xóa"></a></td>   
+                            <td class="border"> <a href="'.$suavoucher.'"><input type="button" value="Sửa" class="bg-success mrbt10 mrbt10 rounded"></a> <a href="'.$xoavoucher.'"><input type="button" value="Xóa" class="bg-danger rounded"></a></td>   
                              </tr>
                         ';
                                         }

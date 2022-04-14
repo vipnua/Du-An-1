@@ -21,10 +21,9 @@ if (isset($_GET['act'])) {
             if (isset($_POST['suavaitro']) && ($_POST['suavaitro'])) {
                 $id = $_POST['id'];
                 $vai_tro = $_POST['vaitro'];
-                update_user_vaitro($id, $vai_tro);
+                update_user_vaitro($id, $vai_tro);   
                 $thongbao = "sua thanh cong";
-                $a = $_POST;
-                 var_dump($a) ;
+                
             }
             $listuser = getAllUser();
             include "quanlyKH/list.php";
