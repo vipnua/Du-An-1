@@ -22,12 +22,12 @@ else if ($trang_thai == 4) {
 }
 ?>
 <div class="row">
-            <div class="row frmtitle">
+            <div class="bg-secondary rounded">
                 <H1>SỬA TRẠNG THÁI</H1>
             </div>
             <div class="row frmcontent">
                 <form action="index.php?act=capnhattrangthai" method="post">
-                    <div class="row mb10">
+                    <div class="row mb10 w-100">
                     Trạng thái hiện tại<br>
                     <input type="text" name="trangthai" disabled="disabled" value="<?=$strangthai?>">                  
                     </div>

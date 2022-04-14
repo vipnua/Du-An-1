@@ -7,12 +7,12 @@
         <div class="row mb10 frmdsuser">
             <table>
                 <tr>
-                    <th></th>
-                    <th>ID COMBO</th>
-                    <th>Sản phẩm</th>
-                    <th>Giá combo</th>
-                    <th>Mô tả</th>
-                    <th>Sửa</th>
+                    <th class="border"></th>
+                    <th class="border">ID COMBO</th>
+                    <th class="border">Sản phẩm</th>
+                    <th class="border">Giá combo</th>
+                    <th class="border">Mô tả</th>
+                    <th class="border">Sửa</th>
                 </tr>
                 <?php
                 
@@ -22,13 +22,13 @@
                     $xoacombo = "index.php?act=xoacombo&id_combo=" . $id_combo;                        
                     echo '
                          <tr>
-                            <td><input type="checkbox" name="" id="' . $id_combo . '"></td>
-                            <td>' . $id_combo . '</td>              
-                            <td>' . $san_pham . '</td>
-                            <td>' . $gia_combo . '</td>
-                            <td>' . $mo_ta . '</td>
+                            <td class="border"><input type="checkbox" name="" id="' . $id_combo . '"></td>
+                            <td class="border">' . $id_combo . '</td>              
+                            <td class="border">' . $san_pham . '</td>
+                            <td class="border">' . $gia_combo . '</td>
+                            <td class="border">' . $mo_ta . '</td>
                     
-                            <td><a href="'.$xoacombo.'"><input type="button" value="Xóa"></a>
+                            <td class="border"><a href="'.$xoacombo.'"><input type="button" value="Xóa"></a>
                             <a href="'.$suacombo.'"><input type="button" value="Sửa"></a></td>
                             
                              </tr>

@@ -1,20 +1,19 @@
 <div class="row">
-    <div class="row frmtitle">
+    <div>
         <h1>Danh sách Đơn hàng</h1>
     </div>
-<div class="row frmcontent">
-        <div class="row mb10 frmdsuser">
-            <table>
-                <tr>
-                    <th></th>
-                    <th>ID ĐƠN HÀNG</th>
-                    <th>HỌ TÊN</th>
-                    <th>ĐỊA CHỈ</th>
-                    <th>THÀNH TIỀN(VND)</th>
-                    <th>LƯU Ý</th>
-                    <th>NGÀY ĐẶT</th>
-                    <th>CHỈNH SỬA</th>
-                    <th>TRẠNG THÁI</th>
+<div >
+        <div>
+            <table class="w-100">
+                <tr class="border">
+                    <th >ID ĐƠN HÀNG</th>
+                    <th class="border">HỌ TÊN</th>
+                    <th class="border">ĐỊA CHỈ</th>
+                    <th class="border">THÀNH TIỀN(VND)</th>
+                    <th class="border">LƯU Ý</th>
+                    <th class="border">NGÀY ĐẶT</th>
+                    <th class="border">CHỈNH SỬA</th>
+                    <th class="border">TRẠNG THÁI</th>
                 </tr>
                 <?php               
                 foreach ($listtddh as $donhang) {
@@ -40,27 +39,22 @@
                        // $strangthai = "ĐÃ GIAO";
                     }
                    ?> <form action="" method="post">
-                         <tr>
-                            <td><input type="checkbox" name="" id=""></td>
-                            <td><?=$id_don_hang ?></td>
-                            <td><?= $ten_khach_hang ?></td>
-                            <td><?= $dia_chi_giao_hang ?></td>
-                            <td><?= $thanh_tien ?> đ</td>
-                            <td><?= $luu_y ?></td>
-                            <td><?= $ngay_dat_hang ?></td>
-                            <td><a href="<?=$xoadonhang?>"><input type="button" value="Xóa"></a>
+                         <tr class="border">
+                            <td class="border"><?=$id_don_hang ?></td>
+                            <td class="border"><?= $ten_khach_hang ?></td>
+                            <td class="border"><?= $dia_chi_giao_hang ?></td>
+                            <td class="border"><?= $thanh_tien ?> đ</td>
+                            <td class="border"><?= $luu_y ?></td>
+                            <td class="border"><?= $ngay_dat_hang ?></td>
+                            <td class="border"><a href="<?=$xoadonhang?>"><input type="button" value="Xóa"></a>
                             </td>
-                            <td><a href="<?=$suathedoi?>"><input type="button" value="<?=$trangthai?>"></a></td>
+                            <td class="border"><a href="<?=$suathedoi?>"><input type="button" value="<?=$trangthai?>"></a></td>
                              </tr>                            
                              </form>
               <?php  }?>                      
             </table>
         </div>
         <div class="row mb10">       
-                                    <input type="button" value="Chọn tất cả" id="checkbox_all">
-                                    <input type="button" value="Bỏ chọn tất cả">
-                                    <input type="button" value="Xóa các mục đã chọn">
-                                    <input type="submit" name="dongy" value="Đồng ý">
                                     <?php if(isset($thongbao)&&($thongbao="")) echo $thongbao?>
                               </div> 
     </div>

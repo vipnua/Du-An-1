@@ -7,14 +7,14 @@
         <div class="row mb10 frmdsuser">
             <table>
                 <tr>
-                    <th></th>
-                    <th>ID TÙY CHỌN</th>
-                    <th>TÊN MÓN</th>
-                    <th>Giá MÓN</th>
-                    <th>Mô tả</th>
-                    <th>SỐ LƯỢNG</th>
-                    <th>HÌNH ẢNH</th>
-                    <th>SỬA / XÓA</th>
+                    <th class="border"></th>
+                    <th class="border">ID TÙY CHỌN</th>
+                    <th class="border">TÊN MÓN</th>
+                    <th class="border">Giá MÓN</th>
+                    <th class="border">Mô tả</th>
+                    <th class="border">SỐ LƯỢNG</th>
+                    <th class="border">HÌNH ẢNH</th>
+                    <th class="border">SỬA / XÓA</th>
                 </tr>
                 <?php
                 
@@ -31,14 +31,14 @@
                       
                     echo '
                          <tr>
-                            <td><input type="checkbox" name="" id="' .$id_tuy_chon . '"></td>
-                            <td>' . $id_tuy_chon . '</td>
-                            <td>' . $ten_mon . '</td>              
-                            <td>' . $gia_mon . '</td>
-                            <td>' . $mo_ta . '</td>
-                            <td>' . $so_luong . '</td>
-                            <td>' . $hinh_anh . '</td>
-                            <td><a href="'.$xoatuychon.'"><input type="button" value="Xóa"></a>
+                            <td class="border"><input type="checkbox" name="" id="' .$id_tuy_chon . '"></td>
+                            <td class="border">' . $id_tuy_chon . '</td>
+                            <td class="border">' . $ten_mon . '</td>              
+                            <td class="border">' . $gia_mon . '</td>
+                            <td class="border">' . $mo_ta . '</td>
+                            <td class="border">' . $so_luong . '</td>
+                            <td class="border">' . $hinh_anh . '</td>
+                            <td class="border"><a href="'.$xoatuychon.'"><input type="button" value="Xóa"></a>
                             <a href="'.$suatuychon.'"><input type="button" value="Sửa"></a></td>
                             
                              </tr>

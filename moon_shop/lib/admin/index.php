@@ -2,6 +2,7 @@
 <?php
 include "header.php";
 include "../../lib/lib.php";
+include "../../../moon_shop/publics/link.php";
 
 if (isset($_GET['act'])) {
     $act = $_GET['act'];

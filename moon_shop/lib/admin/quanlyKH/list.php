@@ -1,21 +1,20 @@
 <div class="row">
-    <div class="row frmtitle">
+    <div>
         <h1>Danh sách User</h1>
     </div>
 
-    <div class="row frmcontent">
-        <div class="row mb10 frmdsuser">
-             <table>
-                <tr>
-                    <th></th>
-                    <th>Tên Đăng nhập</th>
-                    <th>Họ Tên</th>
-                    <th>email</th>
-                    <th>Hình ảnh</th>
-                    <th>Số điện thoại</th>
-                    <th>Địa chỉ</th>
-                    <th>vai Trò<br>(1=KH;2=QL)</th>
-                    <th>Sửa</th>
+    <div class="mw-100 ">
+        <div>
+             <table class="w-100">
+                <tr class="border ml-1">
+                    <th class="border">TÊN ĐĂNG NHẬP</th>
+                    <th class="border">HỌ TÊN</th>
+                    <th class="border">EMAIL</th>
+                    <th class="border">HÌNH ẢNH</th>
+                    <th class="border">SỐ ĐIỆN THOẠI</th>
+                    <th class="border">ĐỊA CHỈ</th>
+                    <th class="border">VAI TRÒ</th>
+                    <th class="border">SỬA</th>
                 </tr>
                 <?php               
                 foreach ($listuser as $user) 
@@ -31,18 +30,17 @@
                     $suauser = "index.php?act=suauser&id=" . $ten_dang_nhap;
                     $xoauser = "index.php?act=xoauser&id=" . $ten_dang_nhap;                    
                     echo '
-                         <tr>
-                            <td><input type="checkbox" name="" id=""></td>           
-                            <td>' . $ten_dang_nhap . '</td>
-                            <td>' . $ho_ten . '</td>
-                            <td>' . $email . '</td>
-                            <td>' . $avatar . '</td>
-                            <td>' . $so_dien_thoai . '</td>
-                            <td>' . $dia_chi . '</td>      
-                            <td>
+                         <tr class="border pl-100">         
+                            <td class="border">' . $ten_dang_nhap . '</td>
+                            <td class="border">' . $ho_ten . '</td>
+                            <td class="border">' . $email . '</td>
+                            <td class="border">' . $avatar . '</td>
+                            <td class="border">' . $so_dien_thoai . '</td>
+                            <td class="border">' . $dia_chi . '</td>      
+                            <td class="border">
                                 '.$vai_tro1.'
                             </td>                      
-                            <td><a href="'.$xoauser.'"><input type="button" value="Xóa"></a>
+                            <td class="border"><a href="'.$xoauser.'"><input type="button" value="Xóa"></a>
                             <a href="'.$suauser.'"><input type="button" value="Sửa"></a></td>
                             
                              </tr>
@@ -52,11 +50,8 @@
                 ?>
             </table>
         </div>
-        <div class="row mb10">       
-            <input type="button" value="Chọn tất cả" id="checkbox_all">
-            <input type="button" value="Bỏ chọn tất cả">
-            <input type="button" value="Xóa các mục đã chọn">
-            <input type="submit" name="dongy" value="Đồng ý">
+        <div class="row">       
+
             <?php if(isset($thongbao)&&($thongbao="")) echo $thongbao?>
         </div>
     </div>
