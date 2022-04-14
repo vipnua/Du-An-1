@@ -17,6 +17,7 @@ if (isset($_GET['act'])) {
             include "quanlyKH/sua.php";
             break;
         case 'updateuser':
+<<<<<<< Updated upstream
             if (isset($_POST['suavaitro']) && ($_POST['suavaitro'])) {
                 $id = $_POST['ten_dang_nhap'];
                 $vai_tro = $_POST['vaitro'];
@@ -29,6 +30,14 @@ if (isset($_GET['act'])) {
         case 'xoauser':
             if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                 delete_user($_GET['id']);
+=======
+            if(isset($_POST['suavaitro'])&&($_POST['suavaitro'])){
+                $id = $_POST['id'];
+                $Vai_tro = $_POST['vaitro'];
+                var_dump($Vai_tro);
+                update_user_vaitro($Vai_tro,$id);
+                $thongbao="sua thanh cong";
+>>>>>>> Stashed changes
             }
             $listuser = getAllUser();
             include "quanlyKH/list.php";
@@ -217,12 +226,31 @@ if (isset($_GET['act'])) {
                 $listtddh = getAll('don_hang');
                 include "quanlyDonhang/list.php";
                 break;
+<<<<<<< Updated upstream
         case 'suathedoi':           
                 if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                     $get = loadone_table('don_hang', 'id_don_hang', $_GET['id']);     
                     include "quanlyDonhang/sua.php";
                     updatetrangthai($id_don_hang,$trang_thai);                   
                 }             
+=======
+            case 'xoavocher':
+                if(isset($_GET['id'])&&($_GET['id']>0)){
+                    delete_vocher($_GET['id']);
+                }
+                $listvocher = getAllvocher();
+                include "quanlyVocher/list.php";
+                $thongbao="xoa thanh cong";
+                break;
+            case 'suavocher':
+                if(isset($_GET['id'])&&($_GET['id']>0)){
+                    $us= loadone_vocher($_GET['id']);
+                }
+                include "quanlyVocher/sua.php";   
+                break;  
+            case'updatevocher':
+                break; 
+>>>>>>> Stashed changes
 
             break;
         case 'xoadonhang':

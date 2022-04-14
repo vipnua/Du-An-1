@@ -21,6 +21,7 @@
                 foreach ($listuser as $user) 
                    {
                     extract($user);     
+<<<<<<< Updated upstream
                     $hinhpath="../../lib/admin/quanlyKH/photo/".$avatar;
                     if(is_file($hinhpath)){
                         $avatar="<img src='".$hinhpath."' height='80'>";
@@ -30,6 +31,10 @@
                     if($vai_tro==1)$vai_tro1="Khách hàng";else $vai_tro1="Quản lý";
                     $suauser = "index.php?act=suauser&id=" . $ten_dang_nhap;
                     $xoauser = "index.php?act=xoauser&id=" . $ten_dang_nhap;                    
+=======
+                    $suauser = "quanlyKH/sua.php?id=" . $id;
+                    $xoauser = "index.php?act=xoauser&id=" . $id;                        
+>>>>>>> Stashed changes
                     echo '
                          <tr>
                             <td><input type="checkbox" name="" id=""></td>           
@@ -58,6 +63,10 @@
             <input type="button" value="Xóa các mục đã chọn">
             <input type="submit" name="dongy" value="Đồng ý">
             <?php if(isset($thongbao)&&($thongbao="")) echo $thongbao?>
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
         </div>
     </div>
     

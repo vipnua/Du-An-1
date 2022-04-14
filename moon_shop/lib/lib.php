@@ -147,6 +147,7 @@ function loadone_user($id)
     $us = pdo_query_one($sql);
     return $us;
 }
+<<<<<<< Updated upstream
 function loadone_voucher($id)
 {
     $sql = "select * from voucher where id_voucher =" . $id;
@@ -193,6 +194,23 @@ function delete_table($table, $where, $id)
 function getAllvoucher()
 {
     $sql = "SELECT * FROM voucher";
+=======
+function loadone_vocher($id){
+    $sql="select * from vocher where id=".$id;
+    $us= pdo_query_one($sql);
+    return $us;
+}
+function delete_user($id){
+    $sql="delete from user where id=".$id;
+    getExecute($sql);
+}
+function delete_vocher($id){
+    $sql="delete from vocher where id=".$id;
+    getExecute($sql);
+}
+function getAllvocher(){
+    $sql = "SELECT * FROM vocher";
+>>>>>>> Stashed changes
     return getExecute($sql);
 }
 function insertvoucher($id_san_pham, $ma_voucher,$giam_gia, $created_at, $updated_at, $mota, $anh)
