@@ -1,9 +1,9 @@
 <div class="row">
-    <div class="mrl10">
+    <div>
         <h1>Danh sách Đơn hàng</h1>
     </div>
 <div >
-        <div class="pd10">
+        <div>
             <table class="w-100">
                 <tr class="border">
                     <th >ID ĐƠN HÀNG</th>
@@ -46,9 +46,9 @@
                             <td class="border"><?= $thanh_tien ?> đ</td>
                             <td class="border"><?= $luu_y ?></td>
                             <td class="border"><?= $ngay_dat_hang ?></td>
-                            <td class="border"><a href="<?=$xoadonhang?>"><input class="bg-danger text-white" type="button" value="Xóa"></a>
+                            <td class="border"><a href="<?=$xoadonhang?>"><input type="button" value="Xóa"></a>
                             </td>
-                            <td class="border"><a href="<?=$suathedoi?>"><input class="bg-primary text-white" type="button" value="<?=$trangthai?>"></a></td>
+                            <td class="border"><a href="<?=$suathedoi?>"><input type="button" value="<?=$trangthai?>"></a></td>
                              </tr>                            
                              </form>
               <?php  }?>                      
