@@ -4,15 +4,19 @@
     <div class="row frmtitle">
         <H1>THÊM MỚI voucher</H1>
     </div>
-    <div class="row frmcontent">
+    <div class="row frmcontent ct">
         <form action="index.php?act=addvoucher" method="post" enctype="multipart/form-data" name="addvoucher">
             <div class="row mb10">
-                ID SẢN PHẨM<br>
+                <div class="txt" >ID SẢN PHẨM<br> </div>
                 <input type="TEXT" name="idsanpham" required>
             </div>
             <div class="row mb10">
                 MÃ VOUCHER<br>
                 <input type="TEXT" name="mavoucher" required>
+            </div>
+            <div class="row mb10">
+                GIẢM GIÁ<br>
+                <input type="number" name="giamgia" required>
             </div>
             <div class="row mb10">
                 CREATED AT<br>

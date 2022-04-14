@@ -19,7 +19,7 @@
                 <?php               
                 foreach ($listtddh as $donhang) {
                     extract($donhang);     
-                    $suathedoi = "index.php?act=xoathedoi&id=" . $id_don_hang;
+                    $suathedoi = "index.php?act=suathedoi&id=" . $id_don_hang;
                     $xoadonhang = "index.php?act=xoadonhang&id=" . $id_don_hang;
                     if ($trang_thai == 1) {
                         $trangthai = "CHƯA XÁC NHẬN";

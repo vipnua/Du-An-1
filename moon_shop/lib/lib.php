@@ -94,14 +94,13 @@ function update_user_vaitro($id, $vai_tro)
     $sql = "Update user SET vai_tro='$vai_tro' WHERE id = $id";
     return getExecute($sql);
 }
-function updatevoucher($id_san_pham, $ma_voucher, $created_at, $updated_at, $anh, $mota, $id_voucher)
+function updatevoucher($id_san_pham, $ma_voucher,$giam_gia, $created_at, $updated_at, $anh, $mota, $id_voucher)
 {
     if ($anh != "") {
-        $sql = "Update voucher SET id_san_pham='$id_san_pham',ma_voucher='$ma_voucher',created_at='$created_at',updated_at='$updated_at',hinh='$anh', mota ='$mota' WHERE id_voucher = $id_voucher";
+        $sql = "Update voucher SET id_san_pham='$id_san_pham',ma_voucher='$ma_voucher',giam_gia='$giam_gia',created_at='$created_at',updated_at='$updated_at',anh='$anh', mota ='$mota' WHERE id_voucher = $id_voucher";
     } else {
-        $sql = "Update voucher SET id_san_pham='$id_san_pham',ma_voucher='$ma_voucher',created_at='$created_at',updated_at='$updated_at', mota ='$mota' WHERE id_voucher = $id_voucher";
+        $sql = "Update voucher SET id_san_pham='$id_san_pham',ma_voucher='$ma_voucher',giam_gia='$giam_gia',created_at='$created_at',updated_at='$updated_at', mota ='$mota' WHERE id_voucher = $id_voucher";
     }
-
     return getExecute($sql);
 }
 function updatecombo($id_combo, $san_pham, $gia_combo, $mo_ta)
@@ -196,10 +195,10 @@ function getAllvoucher()
     $sql = "SELECT * FROM voucher";
     return getExecute($sql);
 }
-function insertvoucher($id_san_pham, $ma_voucher, $created_at, $updated_at, $mota, $anh)
+function insertvoucher($id_san_pham, $ma_voucher,$giam_gia, $created_at, $updated_at, $mota, $anh)
 {
-    $sql = "insert into voucher(id_san_pham,ma_voucher,created_at,updated_at,mota,anh)
-     values('$id_san_pham','$ma_voucher','$created_at','$updated_at','$mota','$anh') ";
+    $sql = "insert into voucher(id_san_pham,ma_voucher,giam_gia,created_at,updated_at,mota,anh)
+     values('$id_san_pham','$ma_voucher','$giam_gia','$created_at','$updated_at','$mota','$anh') ";
     return getExecute($sql);
 }
 function insertcombo($san_pham, $gia_combo, $mo_ta)

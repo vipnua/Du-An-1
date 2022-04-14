@@ -44,6 +44,7 @@ if (isset($_GET['act'])) {
             if (isset($_POST['addvoucher']) && ($_POST['addvoucher'])) {
                 $id_san_pham= $_POST['idsanpham'];
                 $ma_voucher= $_POST['mavoucher'];
+                $giam_gia= $_POST['giamgia'];
                 $created_at = $_POST['createat'];
                 $updated_at = $_POST['updateat'];
                 $mota = $_POST['mota'];
@@ -55,7 +56,7 @@ if (isset($_GET['act'])) {
                 } else {
                     // echo "Sorry, there was an error uploading your file.";
                 }
-                insertvoucher($id_san_pham, $ma_voucher, $created_at, $updated_at, $mota, $anh);
+                insertvoucher($id_san_pham, $ma_voucher,$giam_gia, $created_at, $updated_at, $mota, $anh);
                 $thongbao = "Thêm thành công";
             }
             $listvoucher = getAllvoucher();
@@ -72,6 +73,7 @@ if (isset($_GET['act'])) {
                 $id_voucher = $_POST['id_voucher'];
                 $id_san_pham= $_POST['idsanpham'];
                 $ma_voucher = $_POST['mavoucher'];
+                $giam_gia= $_POST['giamgia'];
                 $created_at = $_POST['createdat'];
                 $updated_at = $_POST['updatedat'];
                 $mota = $_POST['mota'];           
@@ -79,7 +81,7 @@ if (isset($_GET['act'])) {
                 $target_dir = "../../lib/admin/quanlyvoucher/photo/";
                 $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
 
-                updatevoucher($id_san_pham, $ma_voucher, $created_at, $updated_at, $mota, $anh, $id_voucher);
+                updatevoucher($id_san_pham, $ma_voucher,$giam_gia,$created_at, $updated_at, $anh,$mota,  $id_voucher);
                 $thongbao = "Cập nhật thành công";
             }
             //$listsanpham=loadall_sanpham();

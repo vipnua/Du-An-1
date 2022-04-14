@@ -47,7 +47,7 @@ else if ($trang_thai == 4) {
                         <input type="hidden" name="id_tt" value="<?=$id_don_hang?>">
                         <input type="submit" name="capnhattrangthai" value="ĐỒNG Ý TRẠNG THÁI">
                         <input type="reset" value="NHẬP LẠI">
-                        <a href="index.php?act=listorder"><input type="button" value="Danh sách theo dõi"></a>
+                        <a href="index.php?act=listorder"><input type="button" value="Danh sách Đơn hàng"></a>
                     </div>
                     <?php
                         if(isset($thongbao)&&($thongbao!="")) echo $thongbao;

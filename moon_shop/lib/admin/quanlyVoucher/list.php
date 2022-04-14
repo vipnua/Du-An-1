@@ -2,7 +2,6 @@
     <div class="row frmtitle">
         <h1>Danh sách voucher</h1>
     </div>
-
     <div class="row frmcontent">
         <div class="row mb10 frmdsuser">
             <table>
@@ -11,6 +10,7 @@
                     <th>ID VOUCHER</th>
                     <th>ID SẢN PHẨM</th>
                     <th>MÃ VOUCHER</th>
+                    <th>GIẢM GIÁ</th>
                     <th>CREATED AT</th>
                     <th>UPDATED AT</th>
                     <th>HÌNH ẢNH</th>
@@ -34,7 +34,8 @@
                             <td><input type="checkbox" name="" id=""></td>
                             <td>' . $id_voucher . '</td>   
                             <td>' . $id_san_pham. '</td>    
-                            <td>' . $ma_voucher . '%</td>          
+                            <td>' . $ma_voucher . '</td>    
+                            <td>' . $giam_gia . '%</td>
                             <td>' . $created_at . '</td>
                             <td>' . $updated_at . '</td>
                             <td>' . $anh . '</td>
