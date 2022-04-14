@@ -9,6 +9,18 @@ echo $vt;
 
 
 ?>
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+<div>
+    <div class="row">
+        <H1>CẬP NHẬT USER</H1>
+    </div>
+    <div class="box">
+        <form action="index.php?act=updateuser" method="post">        
+            <div class="row">
+=======
+>>>>>>> Stashed changes
 
 <div class="row">
     <div class="row frmtitle">
@@ -19,21 +31,22 @@ echo $vt;
         <form action="index.php?act=updateuser" method="post">
             
             <div class="row mb10">
+>>>>>>> d25fa0e725cb7e04ffae2f0c439fb6d3acef2e37
                 VAI TRÒ        
                 <br>
                 <? if($vai_tro==1)$vai_tro1="Khách hàng";else $vai_tro1="Quản lý"; ?>
-                <select name="vaitro" id="" required>
+                <select class="mrbt10" name="vaitro" id="" required>
                         <option value="">--CHỌN LẠI--</option>
                         <option value="1">Khách hàng</option>
                         <option value="2">Quản lý</option>
                 </select>
+                <input class="text-black bg-warning" type="submit" name="suavaitro" value="Đồng ý">
             </div>
             </div>
         </div>
-        <div class="row mb10">       
+        <div class="text-black">       
         <input type="hidden" name="id" value="<?=$id?>">
         <td class="border">
-            <input type="submit" name="suavaitro" value="Đồng ý">
             <?php if(isset($thongbao)&&($thongbao="")) echo $thongbao?>
         </div>
         </form>

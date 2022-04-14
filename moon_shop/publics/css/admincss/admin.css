@@ -1,6 +1,15 @@
-.body {
+.boxcenter {
+    margin: auto;
+    width: 80%;
+}
+
+.box {
+    max-width: 500px;
     margin: 0 auto;
-    max-width: 1900px;
+}
+
+.talct {
+    text-align: center;
 }
 
 .mrl10 {
@@ -9,6 +18,10 @@
 
 .mr20 {
     margin: 20px;
+}
+
+.mrbt10 {
+    margin-bottom: 10px;
 }
 
 .pd10 {
