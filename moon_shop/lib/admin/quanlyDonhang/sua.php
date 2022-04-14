@@ -25,28 +25,28 @@ else if ($trang_thai == 4) {
             <div class="bg-secondary rounded">
                 <H1>SỬA TRẠNG THÁI</H1>
             </div>
-            <div class="row frmcontent">
+            <div class="text-center">
                 <form action="index.php?act=capnhattrangthai" method="post">
-                    <div class="row mb10 w-100">
+                    <div class="mb10 w-100">
                     Trạng thái hiện tại<br>
                     <input type="text" name="trangthai" disabled="disabled" value="<?=$strangthai?>">                  
                     </div>
-                    <div class="row mb10">
+                    <div >
                     Trạng thái<br>
-                    <select name="tt" id="" required>
+                    <select class="pd10" name="tt" id="" required>
                         <option value=""selected>SỬA TRẠNG THÁI</option>
                         <option value="1">CHƯA XÁC NHẬN</option>
                         <option value="2">ĐÃ XÁC NHẬN</option>
                         <option value="3">HOÀN THÀNH MÓN</option>
                         <option value="4">XÁC NHẬN MÓN</option>
                         <option value="5">GIAO HÀNG THÀNH CÔNG</option>
-                    </select>         
+                    </select>     
+                    <input class="" type="submit" name="capnhattrangthai" value="ĐỒNG Ý TRẠNG THÁI">    
                     </div>
                     
-                    <div class="row mb10">
+                    <div class="mb10">
                         <input type="hidden" name="id_tt" value="<?=$id_don_hang?>">
-                        <input type="submit" name="capnhattrangthai" value="ĐỒNG Ý TRẠNG THÁI">
-                        <input type="reset" value="NHẬP LẠI">
+                    
                         <a href="index.php?act=listorder"><input type="button" value="Danh sách Đơn hàng"></a>
                     </div>
                     <?php
