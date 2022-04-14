@@ -2,7 +2,7 @@
 <div class="box">
 
     <div class="row">
-        <H1>THÊM MỚI voucher</H1>
+        <H1>THÊM MỚI VOUCHER</H1>
     </div>
     <div class="row frmcontent ct">
         <form action="index.php?act=addvoucher" method="post" enctype="multipart/form-data" name="addvoucher">

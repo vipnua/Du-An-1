@@ -14,8 +14,9 @@ if (isset($_GET['act'])) {
         case 'suauser':
             if (isset($_GET['id']) && ($_GET['id']!='')) {
                 $us = loadone_user($_GET['id']);
-            }
+            
             include "quanlyKH/sua.php";
+        }
             break;
         case 'updateuser':
             if (isset($_POST['suavaitro']) && ($_POST['suavaitro'])) {

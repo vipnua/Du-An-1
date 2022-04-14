@@ -33,14 +33,17 @@ else if ($trang_thai == 4) {
                     </div>
                     <div class="row mb10">
                     Trạng thái<br>
-                    <select class="mrbt10" name="tt" id="" required>
+                    <div class="row mrt10"> 
+                        <select class="mrbt10" name="tt" id="" required>
                         <option value=""selected>SỬA TRẠNG THÁI</option>
                         <option value="1">CHƯA XÁC NHẬN</option>
                         <option value="2">ĐÃ XÁC NHẬN</option>
                         <option value="3">HOÀN THÀNH MÓN</option>
                         <option value="4">XÁC NHẬN MÓN</option>
                         <option value="5">GIAO HÀNG THÀNH CÔNG</option>
-                    </select>     
+                    </select>    
+                </div>
+                     
                        
                     </div>           
                     <div class="mrbt10">
