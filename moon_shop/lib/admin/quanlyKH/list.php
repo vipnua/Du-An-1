@@ -1,13 +1,13 @@
 <div class="row">
-    <div>
+    <div class="mrl10">
         <h1>Danh sách User</h1>
     </div>
 
-    <div class="mw-100 ">
-        <div>
+    <div class="mw-100">
+        <div class="pd10">
              <table class="w-100">
                 <tr class="border ml-1">
-                    <th class="border">TÊN ĐĂNG NHẬP</th>
+                    <th class="border ">TÊN ĐĂNG NHẬP</th>
                     <th class="border">HỌ TÊN</th>
                     <th class="border">EMAIL</th>
                     <th class="border">HÌNH ẢNH</th>
@@ -31,7 +31,7 @@
                     $xoauser = "index.php?act=xoauser&id=" . $ten_dang_nhap;                    
                     echo '
                          <tr class="border pl-100">         
-                            <td class="border">' . $ten_dang_nhap . '</td>
+                            <td class="border ">' . $ten_dang_nhap . '</td>
                             <td class="border">' . $ho_ten . '</td>
                             <td class="border">' . $email . '</td>
                             <td class="border">' . $avatar . '</td>
@@ -40,8 +40,8 @@
                             <td class="border">
                                 '.$vai_tro1.'
                             </td>                      
-                            <td class="border"><a href="'.$xoauser.'"><input type="button" value="Xóa"></a>
-                            <a href="'.$suauser.'"><input type="button" value="Sửa"></a></td>
+                            <td class="border"><a href="'.$xoauser.'"><input class="bg-danger text-white" type="button" value="Xóa"></a>
+                            <a href="'.$suauser.'"><input class="bg-primary text-white" type="button" value="Sửa"></a></td>
                             
                              </tr>
                         ';

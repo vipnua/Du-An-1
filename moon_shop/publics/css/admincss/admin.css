@@ -1,0 +1,28 @@
+.body {
+    margin: 0 auto;
+    max-width: 1900px;
+}
+
+.mrl10 {
+    margin-left: 10px;
+}
+
+.mr20 {
+    margin: 20px;
+}
+
+.pd10 {
+    padding: 10px;
+}
+
+.pdl10 {
+    padding-left: 10px;
+}
+
+.boxcentter {
+    margin-left: 10%;
+}
+
+* {
+    box-sizing: border-box;
+}
