@@ -46,9 +46,9 @@
                             <td class="border"><?= $thanh_tien ?> đ</td>
                             <td class="border"><?= $luu_y ?></td>
                             <td class="border"><?= $ngay_dat_hang ?></td>
-                            <td class="border"><a href="<?=$xoadonhang?>"><input type="button" value="Xóa"></a>
+                            <td class="border"><a href="<?=$xoadonhang?>"><input class="bg-danger text-white" type="button" value="Xóa"></a>
                             </td>
-                            <td class="border"><a href="<?=$suathedoi?>"><input type="button" value="<?=$trangthai?>"></a></td>
+                            <td class="border"><a href="<?=$suathedoi?>"><input class="bg-success text-white" type="button" value="<?=$trangthai?>"></a></td>
                              </tr>                            
                              </form>
               <?php  }?>                      

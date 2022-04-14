@@ -20,7 +20,6 @@
                 foreach ($listuser as $user) 
                    {
                     extract($user);     
-<<<<<<< Updated upstream
                     $hinhpath="../../lib/admin/quanlyKH/photo/".$avatar;
                     if(is_file($hinhpath)){
                         $avatar="<img src='".$hinhpath."' height='80'>";
@@ -30,10 +29,6 @@
                     if($vai_tro==1)$vai_tro1="Khách hàng";else $vai_tro1="Quản lý";
                     $suauser = "index.php?act=suauser&id=" . $ten_dang_nhap;
                     $xoauser = "index.php?act=xoauser&id=" . $ten_dang_nhap;                    
-=======
-                    $suauser = "quanlyKH/sua.php?id=" . $id;
-                    $xoauser = "index.php?act=xoauser&id=" . $id;                        
->>>>>>> Stashed changes
                     echo '
                          <tr class="border pl-100">         
                             <td class="border">' . $ten_dang_nhap . '</td>
@@ -45,8 +40,10 @@
                             <td class="border">
                                 '.$vai_tro1.'
                             </td>                      
-                            <td class="border"><a href="'.$xoauser.'"><input type="button" value="Xóa"></a>
-                            <a href="'.$suauser.'"><input type="button" value="Sửa"></a></td>
+                            <td class="border">
+                            <a href="'.$xoauser.'"><input type="button" value="Xóa" class="bg-danger text-white"></a>
+                            <a href="'.$suauser.'"><input type="button" value="Sửa" class="bg-success text-white"></a>
+                            </td>
                             
                              </tr>
                         ';
@@ -58,10 +55,6 @@
         <div class="row">       
 
             <?php if(isset($thongbao)&&($thongbao="")) echo $thongbao?>
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
         </div>
     </div>
     

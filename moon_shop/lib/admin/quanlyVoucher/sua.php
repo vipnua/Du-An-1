@@ -37,7 +37,7 @@ if (is_file($hinhpath)) {
             </div>
             <div class="row mrbt10">
                 SỬA HÌNH ẢNH<br>
-                <input type="file" name="hinh" style="margin-bottom:5px" ;value="<?= $anh ?>">
+                <input type="file" name="hinh" style="with:auto;" ;value="<?= $anh ?>">
                 <br>
                 <?= $anh ?>
             </div>
