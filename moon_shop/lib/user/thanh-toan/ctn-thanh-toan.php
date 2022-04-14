@@ -33,10 +33,10 @@ $san_pham = getSanpham_by_id($id_sp);
         </tr>
         <tr>
             <?php foreach ($san_pham as $value) : ?>
-                <td>
+                <td class="border">
                     <input type="checkbox">
                 </td>
-                <td>
+                <td class="border">
                     <div class="img-sp col-3">
                         <img src="<?= PUBLIC_PATH . "images/" . $value['hinh_anh'] ?>" width="100%" alt="">
                     </div>
@@ -44,12 +44,12 @@ $san_pham = getSanpham_by_id($id_sp);
                         <i><?= $value["ten_san_pham"] ?></i>
                     </div>
                 </td>
-                <td>
+                <td class="border">
                     <div class="btn-so-luong">
                         <p>1</p>
                     </div>
                 </td>
-                <td><?= $value["don_gia"] ?></td>
+                <td class="border"><?= $value["don_gia"] ?></td>
             <?php endforeach ?>
         </tr>
     </table>

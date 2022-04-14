@@ -31,10 +31,10 @@ foreach ($san_pham as $value) {
         </tr>
         <?php foreach ($san_pham as $value) ?>
         <tr>
-            <td>
+            <td class="border">
                 <input type="checkbox">
             </td>
-            <td>
+            <td class="border">
                 <div class="img-sp col-3">
                     <img src="<?= PUBLIC_PATH . "images/" . $value['hinh_anh'] ?>" width="100%" alt="">
                 </div>
@@ -42,15 +42,15 @@ foreach ($san_pham as $value) {
                     <i><?= $value["ten_san_pham"] ?></i>
                 </div>
             </td>
-            <td>
+            <td class="border">
                 <div class="btn-so-luong">
                     <button>-</button>
                     <button>1</button>
                     <button>+</button>
                 </div>
             </td>
-            <td><?= $value["don_gia"] ?></td>
-            <td>
+            <td class="border"><?= $value["don_gia"] ?></td>
+            <td class="border">
                 <button style="border: 1px solid black; border-radius: 5px;">Xóa</button>
             </td>
         </tr>

@@ -32,7 +32,7 @@ echo $vt;
         </div>
         <div class="row mb10">       
         <input type="hidden" name="id" value="<?=$id?>">
-        <td>
+        <td class="border">
             <input type="submit" name="suavaitro" value="Đồng ý">
             <?php if(isset($thongbao)&&($thongbao="")) echo $thongbao?>
         </div>
